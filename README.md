@@ -39,12 +39,12 @@ Our focused evaluations on the `gsm8k-python` dataset yielded:
 
 | Model                       | Solve Rate |
 |-----------------------------|------------|
-| Code Llama - Python 7B      | 23.0% **   |
-| Code Llama - Python 13B     | 34.5% **   |
+| Code Llama - Python 7B      | *23.0%*   |
+| Code Llama - Python 13B     | *34.5%*   |
 | code-davinci-001            | 32.1%      |
 | PaLM 540B                   | 51.3%      |
 
-code-davinci-001 and PaLM 540B results are quoted from the [PaLM paper](https://arxiv.org/abs/2204.02311)
+Boldfaced results are new; code-davinci-001 and PaLM 540B results are quoted from the [PaLM paper](https://arxiv.org/abs/2204.02311).
 
 🔍 Some takeaways:
 - Performance on `gsm8k-python` mirrors the `gsm8k` benchmark for traditional models, especially evident for Llama 2 7B and Llama 2 13B.
