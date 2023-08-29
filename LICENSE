@@ -1,6 +1,7 @@
 The MIT License
 
-Copyright (c) OpenAI (https://openai.com)
+Copyright (c) OpenAI (https://openai.com) for the original code
+Copyright (c) Henryk Michalewski for the gsm8k_python modifications
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
