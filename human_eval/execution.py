@@ -8,6 +8,7 @@ import multiprocessing
 import platform
 import signal
 import tempfile
+from typing import Dict, Union
 
 
 def check_correctness(problem: Dict, completion: str, timeout: float,
@@ -45,7 +46,7 @@ def check_correctness(problem: Dict, completion: str, timeout: float,
                 exec_globals = {}
                 with swallow_io():
                     with time_limit(timeout):
-                         exec(check_program, exec_globals)
+                        exec(check_program, exec_globals)
                 result.append("passed")
             except TimeoutException:
                 result.append("timed out")
@@ -160,10 +161,13 @@ def reliability_guard(maximum_memory_bytes: Optional[int] = None):
 
     if maximum_memory_bytes is not None:
         import resource
-        resource.setrlimit(resource.RLIMIT_AS, (maximum_memory_bytes, maximum_memory_bytes))
-        resource.setrlimit(resource.RLIMIT_DATA, (maximum_memory_bytes, maximum_memory_bytes))
+        resource.setrlimit(resource.RLIMIT_AS,
+                           (maximum_memory_bytes, maximum_memory_bytes))
+        resource.setrlimit(resource.RLIMIT_DATA,
+                           (maximum_memory_bytes, maximum_memory_bytes))
         if not platform.uname().system == 'Darwin':
-            resource.setrlimit(resource.RLIMIT_STACK, (maximum_memory_bytes, maximum_memory_bytes))
+            resource.setrlimit(resource.RLIMIT_STACK,
+                               (maximum_memory_bytes, maximum_memory_bytes))
 
     faulthandler.disable()
 
@@ -219,3 +223,71 @@ def reliability_guard(maximum_memory_bytes: Optional[int] = None):
     sys.modules['resource'] = None
     sys.modules['psutil'] = None
     sys.modules['tkinter'] = None
+
+
+def extract_gsm8k_answer(problem: Dict[str, Union[str, int]]) -> float:
+    """
+    This function takes a 'problem' dictionary as input,
+    extracts the answer, processes it and returns it as a float.
+    
+    :param problem: A dictionary containing problem information.
+    :return: A processed answer as a float.
+    """
+
+    # Extract the answer from the problem dict
+    answer = problem['answer']
+
+    # Split into lines, get the last line, split by '#### ' and get the second part
+    answer = answer.splitlines()[-1].split('#### ')[1]
+
+    # Attempt to convert into a floating point number.
+    try:
+        answer = float(answer)
+    except ValueError:
+        # If exception occurs, check for commas and handle
+        if answer.count(',') == 1:
+            answer = answer.replace(',', '.')
+        elif answer.count(',') == 2:
+            answer = answer.replace(',', '')
+    
+        # Attempt again to convert into a floating point number
+        try:
+            answer = float(answer)
+        except ValueError:
+            # If still not able to convert, assign a default error value
+            answer = -99999
+
+    return float(answer)
+
+
+def check_gsm8k_correctness(problem, completion, task_id):
+    """
+    This function checks the correctness of an exercise solution by comparing its output
+    with a ground truth value.
+
+    Args:
+    problem (dict): The problem dictionary containing details about the problem.
+    completion (str): The user's completed code.
+    task_id (int): The id representing the specific task.
+
+    Returns:
+    bool: True if the user's solution is deemed correct, False otherwise.
+    """
+
+    # Create a HumanEval-like dictionary to store the problem information.
+    he_problem = {}
+
+    # Set the problem properties
+    he_problem['prompt'] = "def exercise9():"
+    he_problem['entry_point'] = 'exercise9'
+    he_problem['task_id'] = task_id
+
+    answer_gt =  extract_gsm8k_answer(problem)
+
+    he_problem['test'] = f"""
+def check(exercise):
+    import math
+    assert math.isclose({answer_gt}, exercise(), abs_tol=1e-4, rel_tol=1e-4)
+"""
+
+    return check_correctness(he_problem, completion, 1)
