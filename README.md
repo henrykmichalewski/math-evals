@@ -39,8 +39,8 @@ Our focused evaluations on the `gsm8k-python` dataset yielded:
 
 | Model                       | Solve Rate |
 |-----------------------------|------------|
-| Code Llama - Python 7B      | *23.0%*   |
-| Code Llama - Python 13B     | *34.5%*   |
+| Code Llama - Python 7B      | **23.0%**   |
+| Code Llama - Python 13B     | **34.5%**   |
 | code-davinci-001            | 32.1%      |
 | PaLM 540B                   | 51.3%      |
 
