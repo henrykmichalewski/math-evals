@@ -14,7 +14,7 @@ We've put together the [gsm8k_python_prompt.py](data/gsm8k_python_prompt.py), a 
 
 ### 3️⃣ CodeLlama 7B and 13B Samples
 
-🚀 Dive in to explore some snazzy samples from CodeLlama 7B and 13B models. Given the models' relatively small sizes, their capabilities might surprise you!
+🚀 Dive in to explore some samples from CodeLlama 7B and 13B models (target length: 256 tokens). Given the models' relatively small sizes, their capabilities might surprise you!
 
 ### 4️⃣ Insights and Extended Findings on Code Llama and gsm8k-python
 
