@@ -278,7 +278,7 @@ def check_gsm8k_correctness(problem, completion, task_id):
     he_problem = {}
 
     # Set the problem properties
-    he_problem['prompt'] = "def exercise9():"
+    he_problem['prompt'] = "def exercise9():\n"
     he_problem['entry_point'] = 'exercise9'
     he_problem['task_id'] = task_id
 
