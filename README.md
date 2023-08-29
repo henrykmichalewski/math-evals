@@ -50,6 +50,12 @@ Boldfaced results are new; code-davinci-001 and PaLM 540B results are quoted fro
 - Performance on `gsm8k-python` mirrors the `gsm8k` benchmark for traditional models, especially evident for Llama 2 7B and Llama 2 13B.
 - Code-focused models, however, truly stand out on the `gsm8k-python` benchmark. The Code Llama checkpoints on `gsm8k-python` surpass their own `gsm8k` benchmarks, and also outshine the Llama 2 `gsm8k` benchmarks. A deeper dive is on its way!
 
+## 🖼️ Scaling Results from PaLM Paper
+
+The image below showcases the results from the [PaLM paper](https://arxiv.org/abs/2204.02311), specifically focusing on scaling gsm8k-python results acroos checkpoints of different sizes. 
+
+![Scaling Results on gsm8k-python](scaling_gsm8k_python.png)
+
 ## 🚀 Getting Started
 
 Explore, experiment, and enjoy! Browse the repository for evaluations, prompts, and samples. Want to replicate our findings? Run the provided Jupyter Notebook. And for those who crave the nitty-gritty details, individual files and directories have got you covered.
