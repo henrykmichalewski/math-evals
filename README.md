@@ -20,7 +20,7 @@ We've put together the [gsm8k_python_prompt.py](data/gsm8k_python_prompt.py), a 
 
 Building on the [Code Llama paper](https://arxiv.org/abs/2308.12950), we've carried out additional evaluations on the `gsm8k-python` dataset. Below are the solve rates:
 
-Original solve rates from the Code Llama paper:
+Original `gsm8k`solve rates from the Code Llama paper:
 
 | Model                  | Size  | Solve Rate |
 |------------------------|-------|------------|
