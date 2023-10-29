@@ -12,6 +12,15 @@ Jump into [llama_evals_gsm8k_python.ipynb](colabs/llama_evals_gsm8k_python.ipynb
 
 We've put together the [gsm8k_python_prompt.py](data/gsm8k_python_prompt.py), a verbatim Python translation of the gsm8k-chain-of-thought prompt discussed in [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903).
 
+### 5️⃣ Minerva Natural Language Prompts
+
+Building upon the work presented in [Solving Quantitative Reasoning Problems with Language Models](https://arxiv.org/abs/2206.14858), we're thrilled to introduce our [minerva_natural_language_prompt.py](data/minerva_natural_language_prompt.py). This embodiment of state-of-the-art natural language prompting techniques is tailored to elicit in-depth responses, ensuring models are primed to exhibit their best performance in quantitative reasoning tasks.
+
+### 6️⃣ Minerva Python Prompts
+
+Further leveraging insights from [Solving Quantitative Reasoning Problems with Language Models](https://arxiv.org/abs/2206.14858), we present our [minerva_python_prompt.py](data/minerva_python_prompt.py). The included tests make sure that Python solutions return the same results as stated in 
+natural language solutions.
+
 ### 3️⃣ CodeLlama 7B and 13B Samples
 
 🚀 Dive in to explore some samples from CodeLlama 7B and 13B models (target length: 256 tokens). Given the models' relatively small sizes, their capabilities might surprise you!

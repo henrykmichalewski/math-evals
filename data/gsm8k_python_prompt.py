@@ -1,16 +1,9 @@
 """
-This file hosts a Python prompt and a template to compose solutions 
+This file contains a Python prompt and a template to compose solutions 
 to math problems.
 
 The PYTHON_PROMPT string includes an introduction comment that explains 
 the tasks, followed by a function stub for user's solution.
-
-These exercises test user's understanding of basic Python programming 
-and mathematical concepts. They also emphasize upon writing clean, 
-well-commented code that solves the problem and explains 
-the reasoning behind it.
-
-The template provides a structure to guide users in designing their solutions.
 """
 
 
