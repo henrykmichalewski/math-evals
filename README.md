@@ -12,15 +12,6 @@ Jump into [llama_evals_gsm8k_python.ipynb](colabs/llama_evals_gsm8k_python.ipynb
 
 We've put together the [gsm8k_python_prompt.py](data/gsm8k_python_prompt.py), a verbatim Python translation of the gsm8k-chain-of-thought prompt discussed in [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903).
 
-### 5️⃣ Minerva Natural Language Prompts
-
-Building upon the work presented in [Solving Quantitative Reasoning Problems with Language Models](https://arxiv.org/abs/2206.14858), we're thrilled to introduce our [minerva_natural_language_prompt.py](data/minerva_natural_language_prompt.py). This embodiment of state-of-the-art natural language prompting techniques is tailored to elicit in-depth responses, ensuring models are primed to exhibit their best performance in quantitative reasoning tasks.
-
-### 6️⃣ Minerva Python Prompts
-
-Further leveraging insights from [Solving Quantitative Reasoning Problems with Language Models](https://arxiv.org/abs/2206.14858), we present our [minerva_python_prompt.py](data/minerva_python_prompt.py). The included tests make sure that Python solutions return the same results as stated in 
-natural language solutions.
-
 ### 3️⃣ CodeLlama 7B and 13B Samples
 
 🚀 Dive in to explore some samples from CodeLlama 7B and 13B models (target length: 256 tokens). Given the models' relatively small sizes, their capabilities might surprise you!
@@ -58,6 +49,14 @@ Boldfaced results are new; code-davinci-001 and PaLM 540B results are quoted fro
 🔍 Some takeaways:
 - Performance on `gsm8k-python` mirrors the `gsm8k` benchmark for traditional models, especially evident for Llama 2 7B and Llama 2 13B.
 - Code-focused models, however, truly stand out on the `gsm8k-python` benchmark. The Code Llama checkpoints on `gsm8k-python` surpass their own `gsm8k` benchmarks, and also outshine the Llama 2 `gsm8k` benchmarks. A deeper dive is on its way!
+
+### 5️⃣ Minerva Natural Language Prompt
+
+Building upon the exciting work presented in [Solving Quantitative Reasoning Problems with Language Models](https://arxiv.org/abs/2206.14858), we're thrilled to bring to you our [minerva_natural_language_prompt.py](data/minerva_natural_language_prompt.py). This cutting-edge natural language prompting technique is tailored to elicit in-depth responses, ensuring models are perfectly primed for quantitative reasoning tasks.
+
+### 6️⃣ Minerva Python Prompt
+
+Taking insights from [Solving Quantitative Reasoning Problems with Language Models](https://arxiv.org/abs/2206.14858) a step further, we're excited to showcase our [minerva_python_prompt.py](data/minerva_python_prompt.py). Our tests ensure that Python solutions are in perfect harmony with the results expressed in natural language.
 
 ## 🖼️ Scaling Results from PaLM Paper
 

@@ -1,0 +1,5 @@
+# Exclude .vscode directory
+.vscode/
+
+# Exclude __pycache__ directory
+data/__pycache__/
