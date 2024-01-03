@@ -2,7 +2,7 @@
 
 # 🌟 Gemini Pro Vertex Access
 
-We're excited to introduce the latest addition to our suite, the Gemini Pro model, which has demonstrated remarkable capabilities in the `gsm8k-python` benchmark. Our recent evaluation, detailed in the [gemini_pro_vertex_evals_gsm8k_python.ipynb](olabs/gemini_pro_vertex_evals_gsm8k_python.ipynb) Jupyter Notebook, showcases Gemini Pro's proficiency, where it achieved an impressive 78% score. This underlines Gemini Pro's advanced understanding and execution of Python-based tasks, especially in the realm of mathematical and quantitative reasoning. Stay tuned for more insights and breakthroughs as we continue to explore the full potential of Gemini models in diverse computational fields.
+We're excited to introduce the latest addition to our suite, the Gemini Pro model, which has demonstrated remarkable capabilities in the `gsm8k-python` benchmark. Our recent evaluation, detailed in the [gemini_pro_vertex_evals_gsm8k_python.ipynb](colabs/gemini_pro_vertex_evals_gsm8k_python.ipynb) Jupyter Notebook, showcases Gemini Pro's proficiency, where it achieved an impressive 78% score. This underlines Gemini Pro's advanced understanding and execution of Python-based tasks, especially in the realm of mathematical and quantitative reasoning. Stay tuned for more insights and breakthroughs as we continue to explore the full potential of Gemini models in diverse computational fields.
 
 # 📘 Evaluation of Llama Models on the gsm8k-python Benchmark
 
